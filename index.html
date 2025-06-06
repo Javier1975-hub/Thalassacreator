@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Thalassacreator</title>
+<link rel="stylesheet" href="css/style.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<h1>⚓ Thalassacreator: Creador de Flotas</h1>
+
+<button onclick="startNewShip()">➕ Añadir Barco</button>
+
+<div id="tabs" style="margin-top: 1rem;">
+  <div id="tab1" class="tab">
+    <h2>1️⃣ Tipo de barco</h2>
+    <button onclick="selectType('Galeón')">Galeón</button>
+    <button onclick="selectType('Fragata')">Fragata</button>
+    <button onclick="nextTab(2)">Siguiente</button>
+  </div>
+
+  <div id="tab2" class="tab">
+    <h2>2️⃣ Nacionalidad</h2>
+    <button onclick="selectNationality('España')">España</button>
+    <button onclick="selectNationality('Francia')">Francia</button>
+    <button onclick="prevTab(1)">Anterior</button>
+    <button onclick="nextTab(3)">Siguiente</button>
+  </div>
+
+  <div id="tab3" class="tab">
+    <h2>3️⃣ Maestría</h2>
+    <button onclick="selectMastery('Novato')">Novato</button>
+    <button onclick="selectMastery('Veterano')">Veterano</button>
+    <button onclick="prevTab(2)">Anterior</button>
+    <button onclick="nextTab(4)">Siguiente</button>
+  </div>
+
+  <div id="tab4" class="tab">
+    <h2>4️⃣ Opciones adicionales</h2>
+    <label><input type="checkbox" id="option1"> Armamento Especial</label><br>
+    <label><input type="checkbox" id="option2"> Velas Mejoradas</label><br>
+    <button onclick="prevTab(3)">Anterior</button>
+    <button onclick="addShip()">✅ Añadir Barco</button>
+  </div>
+</div>
+
+<hr />
+
+<h2>⚓ Flota Actual</h2>
+<ul id="fleetList"></ul>
+<p><strong>Total de puntos:</strong> <span id="totalPoints">0</span></p>
+
+<button onclick="generatePDF()">📄 Descargar PDF</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
