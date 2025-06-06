@@ -1,0 +1,13 @@
+body {
+  font-family: sans-serif;
+  margin: 2rem;
+}
+.tab {
+  display: none;
+}
+.tab.active {
+  display: block;
+}
+button {
+  margin: 0.5rem;
+}
