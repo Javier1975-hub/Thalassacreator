@@ -1,0 +1,122 @@
+[
+  {
+    "ESPARTA": "Remeros Ilotas ",
+    "Coste": 0,
+    "Limite": "-",
+    "Tipo ": "Melee ",
+    "RES ": "3",
+    "Salvación ": "8+ ",
+    "DA/MOD ": "3/-",
+    "DD/MOD ": "-",
+    "Alcance ": "-",
+    "ESPECIAL": "Esclavos"
+  },
+  {
+    "ESPARTA": "Iniciados Espartanos",
+    "Coste": 2,
+    "Limite": "-",
+    "Tipo ": "Melee ",
+    "RES ": "3",
+    "Salvación ": "8+ ",
+    "DA/MOD ": "3/-",
+    "DD/MOD ": "-",
+    "Alcance ": "-",
+    "ESPECIAL": "Temerarios"
+  },
+  {
+    "ESPARTA": "Hoplitas Espartanos",
+    "Coste": 6,
+    "Limite": "-",
+    "Tipo ": "Melee ",
+    "RES ": "3",
+    "Salvación ": "6+",
+    "DA/MOD ": "4/-",
+    "DD/MOD ": "-",
+    "Alcance ": "-",
+    "ESPECIAL": "-"
+  },
+  {
+    "ESPARTA": "Peltastas Espartanos",
+    "Coste": 2,
+    "Limite": "-",
+    "Tipo ": "Melee y Disparo",
+    "RES ": "3",
+    "Salvación ": "7+",
+    "DA/MOD ": "2/-",
+    "DD/MOD ": "2/-",
+    "Alcance ": "6\"",
+    "ESPECIAL": "Hostigadores"
+  },
+  {
+    "ESPARTA": "Skiritai Espartanos",
+    "Coste": 5,
+    "Limite": "0-1 por barco",
+    "Tipo ": "Melee ",
+    "RES ": "3",
+    "Salvación ": "7+",
+    "DA/MOD ": "4/-",
+    "DD/MOD ": "-",
+    "Alcance ": "-",
+    "ESPECIAL": "Orgullosos, Objetivo valioso"
+  },
+  {
+    "ESPARTA": "Santuario Sagrado",
+    "Coste": 7,
+    "Limite": "0-1 por barco",
+    "Tipo ": "Máquina de guerra",
+    "RES ": "1 Estructura",
+    "Salvación ": "Barco",
+    "DA/MOD ": " -/-",
+    "DD/MOD ": " -/-",
+    "Alcance ": "-",
+    "ESPECIAL": "Bendecido, Objetivo valioso"
+  },
+  {
+    "ESPARTA": "Remeros Espartanos Barco Auxiliar",
+    "Coste": 2,
+    "Limite": "-",
+    "Tipo ": "Melee ",
+    "RES ": "3",
+    "Salvación ": "8+ ",
+    "DA/MOD ": "3/-",
+    "DD/MOD ": "-",
+    "Alcance ": "-",
+    "ESPECIAL": "-"
+  },
+  {
+    "ESPARTA": "Marines Penteconter",
+    "Coste": 7,
+    "Limite": "-",
+    "Tipo ": "Melee ",
+    "RES ": "3",
+    "Salvación ": "7 +",
+    "DA/MOD ": "3/- ",
+    "DD/MOD ": "2/- ",
+    "Alcance ": "12\"",
+    "ESPECIAL": "-"
+  },
+  {
+    "ESPARTA": "Balista de Asedio Barcaza de Asedio",
+    "Coste": 0,
+    "Limite": "0-1 por barco",
+    "Tipo ": "Maquina de Guerra",
+    "RES ": "1 Estructura",
+    "Salvación ": "Barco",
+    "DA/MOD ": "1/-",
+    "DD/MOD ": "3/-",
+    "Alcance ": "9-24\"",
+    "ESPECIAL": "-"
+  },
+  {
+    "ESPARTA": "Balista de Asedio Incendiaria Barcaza de Asedio",
+    "Coste": 10,
+    "Limite": "0-1 por barco",
+    "Tipo ": "Maquina de Guerra",
+    "RES ": "1 Estructura",
+    "Salvación ": "Barco",
+    "DA/MOD ": "1/-",
+    "DD/MOD ": "3/-",
+    "Alcance ": "9-24\"",
+    "ESPECIAL": "-"
+  }
+]

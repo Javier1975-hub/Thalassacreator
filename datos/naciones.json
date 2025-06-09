@@ -1,0 +1,32 @@
+[
+  {
+    "Nación": "ATENAS",
+    "Némesis": "ESPARTA",
+    "Regla Especial de los Dados de Mando de Flota": "LA GLORIA DE ATENEA: Cualquier barco combatiendo en la flota ateniense considera los resultados de Flota en los dados de mando de la flota como un resultado de Bendición",
+    "Regla Nacional de barco": "AOE: Todos los barcos atenienses pueden repetir una tirada de Maestría fallida por ronda. "
+  },
+  {
+    "Nación": "CORINTIO",
+    "Némesis": "KÓRKYRA",
+    "Regla Especial de los Dados de Mando de Flota": "CONTRATÁCTICAS: El jugador corintio puede usar el resultado Flota de para cancelar un dado de mando de flota enemigo. Esta es una excepción a la regla de cuándo un jugador puede usar sus dados de mando de flota, y las contra-tácticas deben jugarse tan pronto como un jugador enemigo anuncie el uso de uno de sus dados de mando de flota. Ten en cuenta que los dados se cancelan antes de que se asignen a un barco y, por lo tanto, no cuentan para la cantidad de dados de mando de flota que un barco puede recibir.",
+    "Regla Nacional de barco": "OPORTUNISTA: Cuando un barco corintio resuelve un chequeo de Maestría con un resultado final de 1 o 10, el jugador recibe un marcador de Bendición"
+  },
+  {
+    "Nación": "ESPARTA",
+    "Némesis": "ATENAS",
+    "Regla Especial de los Dados de Mando de Flota": "ANTICIPACIÓN: Cualquier barco combatiendo en la flota espartana puede usar el resultado de \"Flota\" para activar un barco durante la Fase de Mando en lugar de la Fase de Operaciones, antes de cualquier otra activación.",
+    "Regla Nacional de barco": "MOLON LABE: Todos los barcos espartanos ignoran los efectos de las fichas de Caos durante una acción de abordaje."
+  },
+  {
+    "Nación": "CRETA",
+    "Némesis": "",
+    "Regla Especial de los Dados de Mando de Flota": "CAZADORES AL ACECHO: Cualquier barco perteneciente a la flota cretense puede recibir un dado de mando de flota para resolver una maniobra de acecho durante la Fase de Mando, se resuelve como una deriva especial donde puede elegir el lado del barco en el que colocar la plantilla de deriva y posición de la plantilla (lado estrecho o ancho).",
+    "Regla Nacional de barco": "LOS ELEGIDOS DE ARTEMISA: Al Abrir Fuego, si no se ha movido antes de recibir la orden cada ficha de Tripulación a distancia o máquinas de guerra a bordo puede elegir un blanco valido cualquiera, no necesariamente el mismo."
+  },
+  {
+    "Nación": "KÓRKYRA",
+    "Némesis": "CORINTIO",
+    "Regla Especial de los Dados de Mando de Flota": "RESPUESTA RÁPIDA: Cualquier barco perteneciente a la flota korkyria puede usar el resultado de \"Flota\" en los dados de mando de flota como \"Maniobra\"",
+    "Regla Nacional de barco": "RESUELTOS: Todos los barcos kórkyros cuentan con un +1 a su valor de Gobernabilidad. Este bonificador se suma a cualquier mejora de barco o a cualquier otra regla especial."
+  }
+]

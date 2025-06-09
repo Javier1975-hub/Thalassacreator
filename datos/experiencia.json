@@ -1,0 +1,58 @@
+[
+  {
+    "TRIPULACIÓN ": "Insignia",
+    "Nivel de Maestría ": "2+",
+    "Color de bandera ": "Blanca",
+    "Maestría Tripulación": "Insignia",
+    "tipo barco": "Principal",
+    "Coste": 0
+  },
+  {
+    "TRIPULACIÓN ": "Veterana Barco Principal ",
+    "Nivel de Maestría ": "2+",
+    "Color de bandera ": "Verde",
+    "Maestría Tripulación": "Veterana",
+    "tipo barco": "Principal",
+    "Coste": 20
+  },
+  {
+    "TRIPULACIÓN ": "Experta Barco Principal ",
+    "Nivel de Maestría ": "3+",
+    "Color de bandera ": "Amarilla",
+    "Maestría Tripulación": "Experta",
+    "tipo barco": "Principal",
+    "Coste": 10
+  },
+  {
+    "TRIPULACIÓN ": "Neófita Barco Principal ",
+    "Nivel de Maestría ": "4+",
+    "Color de bandera ": "Roja",
+    "Maestría Tripulación": "Neófita",
+    "tipo barco": "Principal",
+    "Coste": 0
+  },
+  {
+    "TRIPULACIÓN ": "Veterana Barco Auxiliar ",
+    "Nivel de Maestría ": "2+",
+    "Color de bandera ": "Verde",
+    "Maestría Tripulación": "Veterana",
+    "tipo barco": "AUXILIAR",
+    "Coste": 15
+  },
+  {
+    "TRIPULACIÓN ": "Experta Barco Auxiliar ",
+    "Nivel de Maestría ": "3+",
+    "Color de bandera ": "Amarilla",
+    "Maestría Tripulación": "Experta",
+    "tipo barco": "AUXILIAR",
+    "Coste": 6
+  },
+  {
+    "TRIPULACIÓN ": "Neófita Barco Auxiliar ",
+    "Nivel de Maestría ": "4+",
+    "Color de bandera ": "Roja",
+    "Maestría Tripulación": "Neófita",
+    "tipo barco": "AUXILIAR",
+    "Coste": 0
+  }
+]

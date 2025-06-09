@@ -1,0 +1,23 @@
+[
+  {
+    "Navarca": "Navarca Guerrero Legendario",
+    "Notas": "El barco insignia puede lanzar 2D10 adicionales en cada acción de abordaje por ronda. Además, todos los ataques reciben +1 para impactar durante cualquier acción de abordaje. Alto Mando: Maestría 2+. Ciudadano Ilustre: El barco insignia recibe una ficha de Bendición al principio de cada Fase de Mando. ",
+    "Nota 1": "Alto Mando El barco cuenta como si tuviera un nivel de Maestría 2+ independientemente de su nivel de Maestría original.",
+    "Nota 2": "Ciudadano Ilustre El barco insignia recibe una ficha de Bendición ( ) al principio de cada Fase de Mando.\nEsta ficha de Bendición ( ) solo puede ser empleada en tiradas y efectos resueltos desde el barco insignia pero pueden convertirse en PV de forma normal si no se emplean.\nSi el barco insignia es hundido esta ficha de Bendición ( ) se pierde si no ha sido utilizada.",
+    "Nota 3": "El barco insignia puede lanzar 2D10 adicionales en cada acción de abordaje por ronda. Además, todos los ataques reciben +1 para impactar durante cualquier acción de abordaje."
+  },
+  {
+    "Navarca": "Navarca Líder inspirador ",
+    "Notas": "Cualquier nave amiga que se encuentre a 10” o menos de lanave insignia recibe +1 en cualquier chequeo de Maestría que deba realizar. Además, la ficha de Bendición de Ciudadano Ilustre que recibe la nave insignia también se puede usar en cualquier nave amiga que se encuentre a 10” o menos, como si fuera una ficha de Bendición normal  Alto Mando: Maestría 2+. Ciudadano Ilustre: El barco insignia recibe una ficha de Bendición al principio de cada Fase de Mando. ",
+    "Nota 1": "Alto Mando El barco cuenta como si tuviera un nivel de Maestría 2+ independientemente de su nivel de Maestría original.",
+    "Nota 2": "Ciudadano Ilustre El barco insignia recibe una ficha de Bendición ( ) al principio de cada Fase de Mando.\nEsta ficha de Bendición ( ) solo puede ser empleada en tiradas y efectos resueltos desde el barco insignia pero pueden convertirse en PV de forma normal si no se emplean.\nSi el barco insignia es hundido esta ficha de Bendición ( ) se pierde si no ha sido utilizada.",
+    "Nota 3": "Cualquier nave amiga que se encuentre a 10” o menos de lanave insignia recibe +1 en cualquier chequeo de Maestría que deba realizar. Además, la ficha de Bendición de Ciudadano Ilustre ( ) que recibe la nave insignia también se puede usar en cualquier nave amiga que se encuentre a 10” o menos, como si fuera una ficha de Bendición ( ) normal "
+  },
+  {
+    "Navarca": "Navarca Gran Estratega",
+    "Notas": "Puede cambiar uno de los resultados de los dados de mando de flota lanzados en la Fase de Mando por el resultado que elija. Cuando ambos jugadores tienen un Navarca de este tipo, el jugador que haya obtenido menos resultados de maniobra ( ) debe cambiar sus dados primero. Alto Mando: Maestría 2+. Ciudadano Ilustre: El barco insignia recibe una ficha de Bendición al principio de cada Fase de Mando. ",
+    "Nota 1": "Alto Mando El barco cuenta como si tuviera un nivel de Maestría 2+ independientemente de su nivel de Maestría original.",
+    "Nota 2": "Ciudadano Ilustre El barco insignia recibe una ficha de Bendición ( ) al principio de cada Fase de Mando.\nEsta ficha de Bendición ( ) solo puede ser empleada en tiradas y efectos resueltos desde el barco insignia pero pueden convertirse en PV de forma normal si no se emplean.\nSi el barco insignia es hundido esta ficha de Bendición ( ) se pierde si no ha sido utilizada.",
+    "Nota 3": "Puede cambiar uno de los resultados de los dados de mando de flota lanzados en la Fase de Mando por el resultado que elija. Cuando ambos jugadores tienen un Navarca de este tipo, el jugador que haya obtenido menos resultados de maniobra ( ) debe cambiar sus dados primero."
+  }
+]
