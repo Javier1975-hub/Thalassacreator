@@ -12,8 +12,8 @@ const archivos = {
     barcos: 'datos/barcos.json',
     naciones: 'datos/naciones.json',
     experiencia: 'datos/experiencia.json',
-    mejoras_proa: 'datos/mejoras_proa.json',
-    mejoras_estructura: 'datos/mejoras_estructura.json',
+    mejoras_proa: 'datos/proa.json',
+    mejoras_estructura: 'datos/estructura.json',
     navarca: 'datos/navarca.json',
     tripulaciones: {
         atenas: 'datos/tripulacion_atenas.json',
