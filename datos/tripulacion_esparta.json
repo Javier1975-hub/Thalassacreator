@@ -1,0 +1,42 @@
+[
+  {
+    "ESPARTA":"Remeros Ilotas ",
+    "Coste":0
+  },
+  {
+    "ESPARTA":"Iniciados Espartanos",
+    "Coste":2
+  },
+  {
+    "ESPARTA":"Hoplitas Espartanos",
+    "Coste":6
+  },
+  {
+    "ESPARTA":"Peltastas Espartanos",
+    "Coste":2
+  },
+  {
+    "ESPARTA":"Skiritai Espartanos",
+    "Coste":5
+  },
+  {
+    "ESPARTA":"Santuario Sagrado",
+    "Coste":7
+  },
+  {
+    "ESPARTA":"Remeros Espartanos Barco Auxiliar",
+    "Coste":2
+  },
+  {
+    "ESPARTA":"Marines Penteconter",
+    "Coste":7
+  },
+  {
+    "ESPARTA":"Balista de Asedio Barcaza de Asedio",
+    "Coste":0
+  },
+  {
+    "ESPARTA":"Balista de Asedio Incendiaria Barcaza de Asedio",
+    "Coste":10
+  }
+]

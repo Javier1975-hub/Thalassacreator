@@ -1,0 +1,54 @@
+[
+  {
+    "CRETA":"Remeros Cretenses ",
+    "Coste":1
+  },
+  {
+    "CRETA":"Hoplitas Cretenses",
+    "Coste":6
+  },
+  {
+    "CRETA":"Toxotai Cretenses",
+    "Coste":5
+  },
+  {
+    "CRETA":"Peltastas Cretenses",
+    "Coste":4
+  },
+  {
+    "CRETA":"Oxybeles Cretense",
+    "Coste":8
+  },
+  {
+    "CRETA":"Oxybeles Cretense Incendiarios",
+    "Coste":14
+  },
+  {
+    "CRETA":"Santuario Sagrado",
+    "Coste":7
+  },
+  {
+    "CRETA":"Torre de Artillería - Oxybeles",
+    "Coste":15
+  },
+  {
+    "CRETA":"Torre de Artillería Incendiarios - Oxybeles",
+    "Coste":21
+  },
+  {
+    "CRETA":"Remeros Cretenses Barco Auxiliar",
+    "Coste":2
+  },
+  {
+    "CRETA":"Marines Penteconter",
+    "Coste":8
+  },
+  {
+    "CRETA":"Balista de Asedio Barcaza de Asedio",
+    "Coste":0
+  },
+  {
+    "CRETA":"Balista de Asedio Incendiaria Barcaza de Asedio",
+    "Coste":10
+  }
+]
