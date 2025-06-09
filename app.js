@@ -1,1 +1,0 @@
-// Aquí va el JavaScript funcional actualizado
