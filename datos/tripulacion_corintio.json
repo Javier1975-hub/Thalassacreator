@@ -1,0 +1,70 @@
+[
+  {
+    "CORINTIO":"Remeros Corintios ",
+    "Coste":0
+  },
+  {
+    "CORINTIO":"Hoplitas Corintios",
+    "Coste":4
+  },
+  {
+    "CORINTIO":"Epibatai Corintios",
+    "Coste":4
+  },
+  {
+    "CORINTIO":"Peltastas Corintios",
+    "Coste":3
+  },
+  {
+    "CORINTIO":"Oxybeles Corintio",
+    "Coste":6
+  },
+  {
+    "CORINTIO":"Oxybeles Corintio Incendiarios",
+    "Coste":10
+  },
+  {
+    "CORINTIO":"Monagon Corintio",
+    "Coste":9
+  },
+  {
+    "CORINTIO":"Monagon Corintio Incendiarios",
+    "Coste":14
+  },
+  {
+    "CORINTIO":"Santuario Sagrado",
+    "Coste":7
+  },
+  {
+    "CORINTIO":"Torre de Artillería - Oxybeles",
+    "Coste":13
+  },
+  {
+    "CORINTIO":"Torre de Artillería Incendiarios - Oxybeles",
+    "Coste":17
+  },
+  {
+    "CORINTIO":"Torre de Monagon",
+    "Coste":16
+  },
+  {
+    "CORINTIO":"Torre de Monagon Incendiarios",
+    "Coste":21
+  },
+  {
+    "CORINTIO":"Remeros Corintios Barco Auxiliar",
+    "Coste":0
+  },
+  {
+    "CORINTIO":"Marines Penteconter",
+    "Coste":7
+  },
+  {
+    "CORINTIO":"Balista de Asedio Barcaza de Asedio",
+    "Coste":0
+  },
+  {
+    "CORINTIO":"Balista de Asedio Incendiaria Barcaza de Asedio",
+    "Coste":10
+  }
+]

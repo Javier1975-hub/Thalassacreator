@@ -1,0 +1,30 @@
+[
+  {
+    "TRIPULACIÓN ":"Insignia",
+    "Coste":0
+  },
+  {
+    "TRIPULACIÓN ":"Veterana Barco Principal ",
+    "Coste":20
+  },
+  {
+    "TRIPULACIÓN ":"Experta Barco Principal ",
+    "Coste":10
+  },
+  {
+    "TRIPULACIÓN ":"Neófita Barco Principal ",
+    "Coste":0
+  },
+  {
+    "TRIPULACIÓN ":"Veterana Barco Auxiliar ",
+    "Coste":15
+  },
+  {
+    "TRIPULACIÓN ":"Experta Barco Auxiliar ",
+    "Coste":6
+  },
+  {
+    "TRIPULACIÓN ":"Neófita Barco Auxiliar ",
+    "Coste":0
+  }
+]

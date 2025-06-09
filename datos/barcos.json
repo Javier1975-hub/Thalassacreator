@@ -1,0 +1,14 @@
+[
+  {
+    "Tipo":"Trirreme Helénico",
+    "Coste":75
+  },
+  {
+    "Tipo":"Pentecónter Helénico",
+    "Coste":40
+  },
+  {
+    "Tipo":"Barcaza Helénica",
+    "Coste":30
+  }
+]
