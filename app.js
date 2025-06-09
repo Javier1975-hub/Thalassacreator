@@ -1,191 +1,252 @@
-let datos = {};
 let flota = [];
-let puntosTotales = 0;
+let datos = {};
+let pasoActual = 0;
+let barcoActual = {};
+let seleccionActual = {};
 
-// Cargar datos desde los JSON
+// Archivos JSON a cargar
+const archivos = {
+  tipo_barco: "datos/barco.json",
+  nacion: "datos/nacion.json",
+  experiencia: "datos/experiencia.json",
+  mejora_estructura: "datos/mejora_estructura.json",
+  mejora_proa: "datos/mejora_proa.json",
+  tripulaciones: {
+    atenas: "datos/tripulacion_atenas.json",
+    esparta: "datos/tripulacion_esparta.json",
+    creta: "datos/tripulacion_creta.json",
+    corintio: "datos/tripulacion_corintio.json",
+  },
+};
+
 async function cargarDatos() {
-  const archivos = [
-    "datos/barco.json",
-    "datos/nacion.json",
-    "datos/experiencia.json",
-    "datos/mejora_estructura.json",
-    "datos/mejora_proa.json",
-    "datos/navarca.json",
-    "datos/tripulacion_atenas.json",
-    "datos/tripulacion_corintio.json",
-    "datos/tripulacion_creta.json",
-    "datos/tripulacion_esparta.json"
-  ];
-
-  for (let archivo of archivos) {
-    const clave = archivo.split("/")[1].replace(".json", "");
-    const respuesta = await fetch(archivo);
-    datos[clave] = await respuesta.json();
+  for (const clave in archivos) {
+    if (clave === "tripulaciones") {
+      datos[clave] = {};
+      for (const nacion in archivos[clave]) {
+        const res = await fetch(archivos[clave][nacion]);
+        datos[clave][nacion] = await res.json();
+      }
+    } else {
+      const res = await fetch(archivos[clave]);
+      datos[clave] = await res.json();
+    }
   }
   crearFormularioPaso1();
 }
 
-// Paso 1: Seleccionar tipo de barco
 function crearFormularioPaso1() {
+  pasoActual = 1;
+  barcoActual = {};
   const contenedor = document.getElementById("formulario");
-  contenedor.innerHTML = crearSelect("Tipo de barco", datos.barco);
-  document.getElementById("Tipo de barco").addEventListener("change", crearFormularioPaso2);
+  contenedor.innerHTML = "<h2>1. Selecciona el tipo de barco</h2>";
+
+  const select = document.createElement("select");
+  select.innerHTML = `<option disabled selected>Seleccionar</option>`;
+  datos.tipo_barco.forEach(b => {
+    select.innerHTML += `<option value="${b.Nombre}">${b.Nombre} (${b.Coste} Coste)</option>`;
+  });
+
+  select.onchange = () => {
+    const barcoSeleccionado = datos.tipo_barco.find(b => b.Nombre === select.value);
+    barcoActual = {
+      Tipo: barcoSeleccionado.Nombre,
+      Coste: barcoSeleccionado.Coste,
+      Datos: barcoSeleccionado,
+    };
+    crearFormularioPaso2();
+  };
+
+  contenedor.appendChild(select);
 }
 
-// Paso 2: Nación
 function crearFormularioPaso2() {
+  pasoActual = 2;
   const contenedor = document.getElementById("formulario");
-  contenedor.innerHTML += crearSelect("Nación", datos.nacion);
-  document.getElementById("Nación").addEventListener("change", crearFormularioPaso3);
+  contenedor.innerHTML = "<h2>2. Selecciona la nación</h2>";
+
+  const select = document.createElement("select");
+  select.innerHTML = `<option disabled selected>Seleccionar</option>`;
+  datos.nacion.forEach(n => {
+    select.innerHTML += `<option value="${n.Nombre}">${n.Nombre}</option>`;
+  });
+
+  select.onchange = () => {
+    barcoActual.Nacion = select.value;
+    crearFormularioPaso3();
+  };
+
+  contenedor.appendChild(select);
 }
 
-// Paso 3: Experiencia
 function crearFormularioPaso3() {
+  pasoActual = 3;
   const contenedor = document.getElementById("formulario");
-  contenedor.innerHTML += crearSelect("Experiencia", datos.experiencia);
-  document.getElementById("Experiencia").addEventListener("change", crearFormularioPaso4);
+  contenedor.innerHTML = "<h2>3. Selecciona la experiencia</h2>";
+
+  const select = document.createElement("select");
+  select.innerHTML = `<option disabled selected>Seleccionar</option>`;
+  datos.experiencia.forEach(exp => {
+    select.innerHTML += `<option value="${exp.Nombre}">${exp.Nombre} (${exp.Coste} Coste)</option>`;
+  });
+
+  select.onchange = () => {
+    const experiencia = datos.experiencia.find(e => e.Nombre === select.value);
+    barcoActual.Experiencia = experiencia.Nombre;
+    barcoActual.Coste += experiencia.Coste;
+    crearFormularioPaso4();
+  };
+
+  contenedor.appendChild(select);
 }
 
-// Paso 4: Mejora estructura
 function crearFormularioPaso4() {
+  pasoActual = 4;
   const contenedor = document.getElementById("formulario");
-  contenedor.innerHTML += crearSelect("Mejora estructura", datos.mejora_estructura);
-  document.getElementById("Mejora estructura").addEventListener("change", crearFormularioPaso5);
+  contenedor.innerHTML = "<h2>4. Selecciona mejoras de estructura</h2>";
+
+  const select = document.createElement("select");
+  select.innerHTML = `<option disabled selected>Seleccionar</option>`;
+  datos.mejora_estructura.forEach(m => {
+    select.innerHTML += `<option value="${m.Nombre}">${m.Nombre} (${m.Coste} Coste)</option>`;
+  });
+
+  select.onchange = () => {
+    const mejora = datos.mejora_estructura.find(m => m.Nombre === select.value);
+    if (!barcoActual.Mejoras) barcoActual.Mejoras = [];
+    barcoActual.Mejoras.push(mejora);
+    barcoActual.Coste += mejora.Coste;
+    crearFormularioPaso5();
+  };
+
+  contenedor.appendChild(select);
 }
 
-// Paso 5: Mejora proa
 function crearFormularioPaso5() {
+  pasoActual = 5;
   const contenedor = document.getElementById("formulario");
-  contenedor.innerHTML += crearSelect("Mejora proa", datos.mejora_proa);
-  document.getElementById("Mejora proa").addEventListener("change", crearFormularioPaso6);
+  contenedor.innerHTML = "<h2>5. Selecciona mejoras de proa</h2>";
+
+  const select = document.createElement("select");
+  select.innerHTML = `<option disabled selected>Seleccionar</option>`;
+  datos.mejora_proa.forEach(m => {
+    select.innerHTML += `<option value="${m.Nombre}">${m.Nombre} (${m.Coste} Coste)</option>`;
+  });
+
+  select.onchange = () => {
+    const mejora = datos.mejora_proa.find(m => m.Nombre === select.value);
+    if (!barcoActual.Mejoras) barcoActual.Mejoras = [];
+    barcoActual.Mejoras.push(mejora);
+    barcoActual.Coste += mejora.Coste;
+    crearFormularioPaso6();
+  };
+
+  contenedor.appendChild(select);
 }
 
-// Paso 6: Tripulación y navarca
 function crearFormularioPaso6() {
-  const nacion = document.getElementById("Nación").value.toLowerCase();
-  const tripKey = `tripulacion_${nacion}`;
-  const trip = datos[tripKey] || [];
+  pasoActual = 6;
   const contenedor = document.getElementById("formulario");
+  contenedor.innerHTML = "<h2>6. Selecciona la tripulación</h2>";
 
-  contenedor.innerHTML += crearSelect("Tripulación", trip);
-  contenedor.innerHTML += crearSelect("Navarca", datos.navarca);
-
-  const boton = document.createElement("button");
-  boton.textContent = "Añadir Barco";
-  boton.onclick = añadirBarco;
-  contenedor.appendChild(boton);
-}
-
-function crearSelect(tipo, opciones) {
-  let html = `<label>${tipo}</label><select id="${tipo}"><option disabled selected>Seleccionar</option>`;
-  opciones.forEach(op => {
-    html += `<option value="${op.Nombre}">${op.Nombre} (${op.Coste} pts)</option>`;
-  });
-  html += `</select><br>`;
-  return html;
-}
-
-function añadirBarco() {
-  const campos = [
-    "Tipo de barco",
-    "Nación",
-    "Experiencia",
-    "Mejora estructura",
-    "Mejora proa",
-    "Tripulación",
-    "Navarca"
-  ];
-
-  campos.forEach(campo => {
-    const valor = document.getElementById(campo).value;
-    let datosLista = datos[campo.toLowerCase().replace(" ", "_")];
-    if (campo === "Tripulación") {
-      const nacion = document.getElementById("Nación").value.toLowerCase();
-      datosLista = datos[`tripulacion_${nacion}`];
-    }
-    const item = datosLista.find(e => e.Nombre === valor);
-    flota.push({ Tipo: campo, Nombre: item.Nombre, Coste: parseInt(item.Coste) || 0 });
-    puntosTotales += parseInt(item.Coste) || 0;
+  const tripData = datos.tripulaciones[barcoActual.Nacion.toLowerCase()];
+  const select = document.createElement("select");
+  select.innerHTML = `<option disabled selected>Seleccionar</option>`;
+  tripData.forEach(t => {
+    select.innerHTML += `<option value="${t.Nombre}">${t.Nombre} (${t.Coste} Coste)</option>`;
   });
 
-  actualizarResumen();
-  document.getElementById("formulario").innerHTML = "";
-  crearFormularioPaso1();
+  select.onchange = () => {
+    const trip = tripData.find(t => t.Nombre === select.value);
+    barcoActual.Tripulacion = trip.Nombre;
+    barcoActual.Coste += trip.Coste;
+    barcoActual.Datos.Tripulacion = trip;
+    flota.push(barcoActual);
+    mostrarFlota();
+    crearFormularioPaso1();
+  };
+
+  contenedor.appendChild(select);
 }
 
-function actualizarResumen() {
-  const resumen = document.getElementById("resumen");
-  resumen.innerHTML = "<h3>Flota:</h3>";
-  flota.forEach((item, i) => {
-    resumen.innerHTML += `<div>${item.Tipo}: ${item.Nombre} (${item.Coste} pts) <button onclick="eliminar(${i})">❌</button></div>`;
+function mostrarFlota() {
+  const contenedor = document.getElementById("flota");
+  contenedor.innerHTML = "<h2>Flota creada:</h2>";
+
+  const lista = document.createElement("ul");
+  flota.forEach((barco, i) => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      ${i + 1}. ${barco.Tipo} - ${barco.Nacion} - ${barco.Experiencia} - ${barco.Tripulacion} - Coste: ${barco.Coste} 
+      <button onclick="eliminarBarco(${i})">Eliminar</button>
+    `;
+    lista.appendChild(li);
   });
-  resumen.innerHTML += `<p><strong>Coste total: ${puntosTotales} pts</strong></p>`;
+
+  contenedor.appendChild(lista);
+
+  const total = flota.reduce((acc, b) => acc + b.Coste, 0);
+  const totalP = document.createElement("p");
+  totalP.textContent = `Coste total: ${total}`;
+  contenedor.appendChild(totalP);
 }
 
-function eliminar(index) {
-  puntosTotales -= flota[index].Coste;
+function eliminarBarco(index) {
   flota.splice(index, 1);
-  actualizarResumen();
+  mostrarFlota();
 }
 
-// GENERAR PDF CON BORDES
-document.getElementById("guardar").addEventListener("click", () => {
+async function generarPDF() {
+  const { jsPDF } = window.jspdf;
   const doc = new jsPDF();
   let y = 10;
-  let barcosAgrupados = [];
-  let barcoActual = null;
 
-  flota.forEach((item) => {
-    if (item.Tipo === "Tipo de barco") {
-      barcoActual = {
-        Nombre: item.Nombre,
-        CosteTotal: item.Coste || 0,
-        Componentes: [{ Tipo: item.Tipo, Nombre: item.Nombre, Coste: item.Coste }]
-      };
-      barcosAgrupados.push(barcoActual);
-    } else if (barcoActual) {
-      barcoActual.CosteTotal += item.Coste || 0;
-      barcoActual.Componentes.push({ Tipo: item.Tipo, Nombre: item.Nombre, Coste: item.Coste });
-    }
-  });
+  doc.setFontSize(16);
+  doc.text("Flota - ThalassaCreator", 10, y);
+  y += 10;
 
-  barcosAgrupados.forEach((barco, index) => {
-    doc.setFontSize(12);
-    doc.text(`Barco ${index + 1}: ${barco.Nombre}`, 10, y);
-    y += 6;
-
-    doc.setFontSize(10);
-    doc.rect(10, y, 190, 8);
-    doc.text("Tipo", 12, y + 6);
-    doc.text("Nombre", 70, y + 6);
-    doc.text("Coste", 170, y + 6);
+  flota.forEach((barco, i) => {
+    doc.setFontSize(14);
+    doc.text(`${i + 1}. ${barco.Tipo} (${barco.Coste} pts)`, 10, y);
     y += 8;
 
-    barco.Componentes.forEach((comp) => {
-      doc.rect(10, y, 190, 8);
-      doc.text(comp.Tipo, 12, y + 6);
-      doc.text(comp.Nombre, 70, y + 6);
-      doc.text(`${comp.Coste ?? 0}`, 170, y + 6);
-      y += 8;
+    const detalles = {
+      "Nación": barco.Nacion,
+      "Experiencia": barco.Experiencia,
+      "Tripulación": barco.Tripulacion,
+    };
+
+    if (barco.Mejoras) {
+      barco.Mejoras.forEach((m, idx) => {
+        detalles[`Mejora ${idx + 1}`] = m.Nombre;
+      });
+    }
+
+    Object.entries(detalles).forEach(([k, v]) => {
+      doc.setFontSize(11);
+      doc.text(`- ${k}: ${v}`, 12, y);
+      y += 6;
     });
 
-    doc.setFont("helvetica", "bold");
-    doc.rect(10, y, 190, 8);
-    doc.text(`Coste total del barco: ${barco.CosteTotal} pts`, 12, y + 6);
-    doc.setFont("helvetica", "normal");
-    y += 12;
+    Object.entries(barco.Datos).forEach(([k, v]) => {
+      if (typeof v === "string" || typeof v === "number") {
+        doc.setFontSize(10);
+        doc.text(`  ${k}: ${v}`, 14, y);
+        y += 5;
+      }
+    });
 
+    y += 4;
     if (y > 270) {
       doc.addPage();
       y = 10;
     }
   });
 
-  doc.setFontSize(12);
-  doc.setFont("helvetica", "bold");
-  doc.text(`Coste total de la flota: ${puntosTotales} pts`, 10, y);
-  doc.save("flota.pdf");
-});
+  const total = flota.reduce((acc, b) => acc + b.Coste, 0);
+  doc.setFontSize(14);
+  doc.text(`Total: ${total} pts`, 10, y + 5);
+  doc.save("Flota_Thalassa.pdf");
+}
 
-// Iniciar
 cargarDatos();
