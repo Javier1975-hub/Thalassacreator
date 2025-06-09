@@ -81,7 +81,13 @@ function crearFormularioPaso5(estructura) {
 
 function crearFormularioPaso6(proa) {
     limpiarFormularioDesde('proa');
-    const nacion = document.getElementById('nacion').value.toLowerCase();
+    const nacionSelect = document.getElementById('nacion');
+if (!nacionSelect) {
+    alert("Debe seleccionar una nación antes de continuar.");
+    return;
+}
+const nacion = nacionSelect.value.toLowerCase();
+
     const ruta = archivos.tripulaciones[nacion];
     if (!ruta) return alert("No hay tripulación para esa nación.");
     fetch(ruta)
