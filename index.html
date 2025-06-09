@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ThalassaCreator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Neuton&family=IM+Fell+English+SC&display=swap');
+
+        body {
+            font-family: 'IM Fell English SC', serif;
+            background: #fdf6e3;
+            color: #3b2f2f;
+            margin: 0;
+            padding: 1em;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            border-bottom: 2px solid #8b5e3c;
+            margin-bottom: 1em;
+            padding-bottom: 0.5em;
+        }
+
+        #contenedor {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media(min-width: 768px) {
+            #contenedor {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        #resumen {
+            flex: 1;
+            padding: 1em;
+            border: 2px solid #8b5e3c;
+            background: #fffef9;
+            margin-bottom: 1em;
+        }
+
+        #formulario {
+            flex: 2;
+            padding: 1em;
+            background: #fcf8f3;
+            border: 2px solid #8b5e3c;
+        }
+
+        select, button {
+            width: 100%;
+            margin: 1em 0;
+            padding: 0.6em;
+            font-size: 1em;
+            border: 1px solid #8b5e3c;
+            background: #fff;
+            font-family: 'Neuton', serif;
+        }
+
+        .barco-resumen {
+            border: 1px dashed #8b5e3c;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            background: #fefcf7;
+        }
+
+        button {
+            background-color: #d4b483;
+            color: #3b2f2f;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e5c49d;
+        }
+    </style>
+</head>
+<body>
+    <h1>ThalassaCreator</h1>
+    <div id="contenedor">
+        <div id="resumen">Resumen de la flota</div>
+        <div id="formulario">Cargando opciones...</div>
+    </div>
+    <button onclick="generarPDF()">Generar PDF</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
